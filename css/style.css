@@ -1,0 +1,35 @@
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+}
+
+nav {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: blue;
+}
+
+main {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: red;
+}
+
+footer {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: chocolate;
+}
