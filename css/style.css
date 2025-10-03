@@ -1,5 +1,5 @@
 img {
-	max-width: 100%;
+	max-width: 50%;
 	height: auto;
 	display: block;
 }
@@ -14,22 +14,33 @@ header {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: black;
+	margin-top: 10px;
+	margin-left: 20px;
+	padding-left: 50px;
 }
 
 nav {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: blue;
+	margin-top: 5px;
+	margin-right: 200px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
 main {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: red;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-bottom: 50px;
 }
 
 footer {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: chocolate;
+	padding-left: 200px;
 }
