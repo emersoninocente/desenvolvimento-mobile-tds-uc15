@@ -1,0 +1,67 @@
+:root {
+	--cor-de-fundo: #ebecee;
+	--branco: #ffffff;
+	--listMenu__title: red;
+}
+
+body {
+	background-color: var(--cor-de-fundo);
+}
+h1 {
+	background-color: white;
+}
+
+.cabecalho {
+	background-color: var(--branco);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.cabecalho__menuHamburger {
+	height: 24px;
+	width: 24px;
+	background-image: url(./img/img_menu_hamburger_peq.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+}
+
+.conteiner {
+	display: flex;
+	align-items: center;
+}
+.conteiner__img {
+	padding: 1em;
+}
+.conteiner__btn {
+	display: none;
+}
+.conteiner__btn:checked ~ .listMenu {
+	display: block;
+}
+
+.listMenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 60vw;
+}
+
+.listMenu__title,
+.listMenu__item {
+	padding: 1em;
+	background-color: var(--branco);
+}
+
+.listMenu__title {
+	color: var(--listMenu_title);
+}
+
+.listMenu__lnk {
+	background: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-transform: uppercase;
+}
