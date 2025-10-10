@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid Responsivo</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, sans-serif;
+				background: #f5f5f5;
+				padding: 2rem 1rem;
+			}
+
+			/* MOBILE - 1 coluna */
+			.grid {
+				display: grid;
+				gap: 1.5rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.card {
+				background: white;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s;
+			}
+
+			.card:hover {
+				transform: translateY(-4px);
+			}
+
+			.card-image {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.card-content {
+				padding: 1.5rem;
+			}
+
+			.card-title {
+				font-size: 1.25rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.card-text {
+				color: #666;
+				line-height: 1.6;
+			}
+
+			/* TABLET - 2 colunas */
+			@media (min-width: 768px) {
+				.grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			/* DESKTOP - 3 colunas */
+			@media (min-width: 1024px) {
+				.grid {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				.card-image {
+					height: 250px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 1"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 1</h2>
+					<p class="card-text">
+						Este é um exemplo de card responsivo que se adapta a diferentes
+						tamanhos de tela.
+					</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 2"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 2</h2>
+					<p class="card-text">
+						No mobile aparece 1 coluna, no tablet 2 colunas e no desktop 3
+						colunas.
+					</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 3"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 3</h2>
+					<p class="card-text">
+						Esta é a abordagem Mobile First usando media queries com min-width.
+					</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 4"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 4</h2>
+					<p class="card-text">
+						Os cards são totalmente responsivos e se adaptam ao conteúdo.
+					</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 5"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 5</h2>
+					<p class="card-text">
+						Teste redimensionando a janela do navegador para ver as mudanças.
+					</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<img
+					src="https://via.placeholder.com/400x300"
+					alt="Card 6"
+					class="card-image"
+				/>
+				<div class="card-content">
+					<h2 class="card-title">Card 6</h2>
+					<p class="card-text">
+						Grid responsivo é essencial para layouts modernos.
+					</p>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

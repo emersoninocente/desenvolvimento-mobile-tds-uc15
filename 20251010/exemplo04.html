@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tipografia Responsiva</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* MOBILE */
+			body {
+				font-family: Georgia, serif;
+				font-size: 16px;
+				line-height: 1.6;
+				padding: 1rem;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 2rem;
+				line-height: 1.2;
+				margin-bottom: 1rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+				line-height: 1.3;
+				margin: 1.5rem 0 0.75rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			.lead {
+				font-size: 1.125rem;
+				color: #666;
+				margin-bottom: 1.5rem;
+			}
+
+			/* TABLET */
+			@media (min-width: 768px) {
+				body {
+					font-size: 18px;
+					padding: 2rem;
+				}
+
+				h1 {
+					font-size: 3rem;
+				}
+
+				h2 {
+					font-size: 2rem;
+				}
+
+				.lead {
+					font-size: 1.25rem;
+				}
+			}
+
+			/* DESKTOP */
+			@media (min-width: 1024px) {
+				body {
+					font-size: 20px;
+				}
+
+				h1 {
+					font-size: 3.5rem;
+				}
+
+				h2 {
+					font-size: 2.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<h1>Título Principal Responsivo</h1>
+			<p class="lead">
+				Este é um parágrafo de destaque que também se adapta aos diferentes
+				tamanhos de tela.
+			</p>
+
+			<h2>Subtítulo da Seção</h2>
+			<p>
+				Este é um parágrafo normal. A tipografia responsiva melhora a
+				legibilidade em todos os dispositivos. No mobile, as fontes são menores
+				para caber mais conteúdo na tela.
+			</p>
+
+			<p>
+				No tablet e desktop, aumentamos progressivamente o tamanho das fontes
+				para melhorar a experiência de leitura em telas maiores.
+			</p>
+
+			<h2>Outra Seção</h2>
+			<p>
+				Teste redimensionar a janela do navegador para ver como os tamanhos de
+				fonte se adaptam suavemente.
+			</p>
+		</article>
+	</body>
+</html>

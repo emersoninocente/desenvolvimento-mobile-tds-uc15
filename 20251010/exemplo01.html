@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Navegação Responsiva</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* MOBILE */
+			.header {
+				background: #333;
+				padding: 1rem;
+			}
+
+			.logo {
+				color: white;
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+
+			.nav {
+				display: none; /* Escondido no mobile */
+			}
+
+			.menu-toggle {
+				background: white;
+				color: #333;
+				border: none;
+				padding: 0.5rem 1rem;
+				cursor: pointer;
+				float: right;
+			}
+
+			/* TABLET+ */
+			@media (min-width: 768px) {
+				.header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.menu-toggle {
+					display: none; /* Esconde botão no desktop */
+				}
+
+				.nav {
+					display: flex !important; /* Sempre visível */
+					gap: 2rem;
+				}
+
+				.nav a {
+					color: white;
+					text-decoration: none;
+					transition: color 0.3s;
+				}
+
+				.nav a:hover {
+					color: #ffc107;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="logo">MeuSite</div>
+			<button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+			<nav class="nav" id="nav">
+				<a href="#home">Home</a>
+				<a href="#sobre">Sobre</a>
+				<a href="#servicos">Serviços</a>
+				<a href="#contato">Contato</a>
+			</nav>
+		</header>
+
+		<script>
+			function toggleMenu() {
+				const nav = document.getElementById("nav")
+				nav.style.display = nav.style.display === "flex" ? "none" : "flex"
+			}
+		</script>
+	</body>
+</html>

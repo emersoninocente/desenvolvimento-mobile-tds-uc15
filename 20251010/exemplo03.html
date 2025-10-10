@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Layout com Sidebar</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, sans-serif;
+				line-height: 1.6;
+			}
+
+			/* MOBILE - Layout em coluna */
+			.layout {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.header {
+				background: #333;
+				color: white;
+				padding: 1rem;
+			}
+
+			.main-content {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+
+			.sidebar {
+				background: #f4f4f4;
+				padding: 1rem;
+				border-bottom: 1px solid #ddd;
+			}
+
+			.content {
+				padding: 1rem;
+				flex: 1;
+			}
+
+			.footer {
+				background: #333;
+				color: white;
+				padding: 1rem;
+				text-align: center;
+			}
+
+			/* TABLET+ - Sidebar ao lado */
+			@media (min-width: 768px) {
+				.main-content {
+					flex-direction: row;
+				}
+
+				.sidebar {
+					width: 250px;
+					min-width: 250px;
+					border-bottom: none;
+					border-right: 1px solid #ddd;
+				}
+
+				.content {
+					padding: 2rem;
+				}
+			}
+
+			/* DESKTOP - Aumenta sidebar */
+			@media (min-width: 1024px) {
+				.sidebar {
+					width: 300px;
+					min-width: 300px;
+					padding: 2rem;
+				}
+
+				.content {
+					max-width: 1200px;
+					margin: 0 auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>Meu Site</h1>
+			</header>
+
+			<div class="main-content">
+				<aside class="sidebar">
+					<h3>Menu Lateral</h3>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</ul>
+				</aside>
+
+				<main class="content">
+					<h2>Conteúdo Principal</h2>
+					<p>No mobile, a sidebar aparece acima do conteúdo.</p>
+					<p>No tablet e desktop, aparece ao lado esquerdo.</p>
+					<p>Este é um padrão comum em layouts responsivos.</p>
+				</main>
+			</div>
+
+			<footer class="footer">
+				<p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+			</footer>
+		</div>
+	</body>
+</html>
