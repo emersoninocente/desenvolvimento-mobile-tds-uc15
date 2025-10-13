@@ -1,0 +1,64 @@
+/* CSS para Mobile First */
+body {
+	font-size: 12px;
+}
+
+header {
+	background: blue;
+	color: white;
+	height: 15%;
+}
+
+main {
+	background: yellow;
+}
+
+section {
+	background: orange;
+	color: white;
+	margin: 0.2rem;
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 10rem;
+}
+
+article {
+	background: chartreuse;
+	color: blue;
+	margin: 0.2rem;
+	width: 48%;
+}
+
+aside {
+	background: red;
+	min-height: 3rem;
+}
+
+footer {
+	background: green;
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 1rem;
+}
+
+.rodape-box {
+	background: rebeccapurple;
+	margin: 0.1rem;
+	min-width: 32%;
+}
+
+@media screen and (min-width: 800px) {
+	main {
+		width: 80%;
+		display: inline-block;
+	}
+
+	aside {
+		width: 19%;
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1024) {
+	/* Modificações para Desktop */
+}
